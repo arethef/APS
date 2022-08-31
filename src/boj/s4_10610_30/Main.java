@@ -6,6 +6,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String N = br.readLine();
         if (!N.contains("0")) { // 10의 배수
             System.out.println(-1);
             return;
