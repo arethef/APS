@@ -1,4 +1,4 @@
-package boj.s4_10610_30;
+package s4_10610_30;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

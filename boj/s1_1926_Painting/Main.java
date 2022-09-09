@@ -1,4 +1,4 @@
-package boj.s1_1926_Painting;
+package s1_1926_Painting;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

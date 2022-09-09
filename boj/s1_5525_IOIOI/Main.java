@@ -1,4 +1,4 @@
-package boj.s1_5525_IOIOI;
+package s1_5525_IOIOI;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package boj.s3_14425_StringSet;
+package s3_14425_StringSet;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

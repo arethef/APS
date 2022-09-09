@@ -1,4 +1,4 @@
-package boj.s2_14426_FindPrefix;
+package s2_14426_FindPrefix;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

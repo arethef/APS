@@ -1,4 +1,4 @@
-package boj.g5_9251_LCS;
+package g5_9251_LCS;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

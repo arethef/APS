@@ -1,4 +1,4 @@
-package boj.s5_1181_WordSort;
+package s5_1181_WordSort;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

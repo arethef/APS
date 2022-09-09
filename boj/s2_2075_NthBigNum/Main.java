@@ -1,4 +1,4 @@
-package boj.s2_2075_NthBigNum;
+package s2_2075_NthBigNum;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package boj.s3_14501_Leave;
+package s3_14501_Leave;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
