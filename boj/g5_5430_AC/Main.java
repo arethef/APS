@@ -51,8 +51,8 @@ public class Main {
                             res[i] = q.pollFirst();
                         }
                     }
-                    for (int i=0; i<res.length; i++) {
-                        sb.append(res[i]).append(",");
+                    for (String re : res) {
+                        sb.append(re).append(",");
                     }
                     sb.deleteCharAt(sb.length()-1);
                 }
