@@ -16,10 +16,10 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        M = Integer.parseInt(st.nextToken());
-        H = Integer.parseInt(st.nextToken());
-        mc = new ArrayList<>();
+        N = Integer.parseInt(st.nextToken()); // 민초 마을 크기
+        M = Integer.parseInt(st.nextToken()); // 진우 초기체력
+        H = Integer.parseInt(st.nextToken()); // 민초 증가 체력
+        mc = new ArrayList<>(); // 민초 위치 담는 배열
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
@@ -30,11 +30,14 @@ public class Main {
                     mc.add(new Pos(i, j));
             }
         }
-        mcTotal = mc.size();
+        // 입력 끝
 
+        mcTotal = mc.size(); // 민초 개수
+        visited = new boolean[mcTotal];
         for (int i = 0; i < mcTotal; i++) {
-            visited = new boolean[mcTotal];
+            // 각 위치의 민초에 대해 첫 민초가 될 경우
             int dist = getDist(home.y, home.x, mc.get(i).y, mc.get(i).x);
+            // 진우의 집에서 해당 민초까지 갈 수 있으면 민초 마시러 가기
             if (dist <= M)
                 find(i, M - dist + H, 1);
         }
@@ -42,6 +45,7 @@ public class Main {
         System.out.println(answer);
     }
 
+    // dfs
     public static void find(int currIdx, int hp, int mcCnt) {
         Pos curr = mc.get(currIdx);
         visited[currIdx] = true;
@@ -50,12 +54,14 @@ public class Main {
                 continue;
             Pos next = mc.get(i);
             int dist = getDist(curr.y, curr.x, next.y, next.x);
+            // 다음 민초까지 갈 수 있으면 민초 마시러 가기
             if (dist > hp)
                 continue;
             find(i, hp - dist + H, mcCnt + 1);
         }
 
         int distFromLastToHome = getDist(curr.y, curr.x, home.y, home.x);
+        // 마지막까지 왔을 때 집으로 돌아갈 수 있으면 민초 최대 개수 비교 갱신
         if (distFromLastToHome <= hp)
             answer = Math.max(answer, mcCnt);
         visited[currIdx] = false;
