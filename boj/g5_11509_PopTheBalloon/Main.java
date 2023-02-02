@@ -25,17 +25,5 @@ public class Main {
       arrows[num - 1]++; // 감소한 높이에 화살 수 더하기
     }
     System.out.println(answer);
-
-    // ArrayList<Integer> last = new ArrayList<>();
-    // for (int i = 0; i < N; i++) {
-    // int input = Integer.parseInt(st.nextToken());
-    // if (last.contains(input + 1)) {
-    // last.remove(last.indexOf(input + 1));
-    // }
-    // last.add(input);
-    // }
-    // System.out.println(last.size());
-
   }
-
 }
