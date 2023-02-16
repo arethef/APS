@@ -1,3 +1,6 @@
+input.txt
+.DS_Store
+
 # Project exclude paths
 /out/
 /.idea/
