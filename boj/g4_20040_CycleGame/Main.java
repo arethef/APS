@@ -13,15 +13,21 @@ public class Main {
     n = Integer.parseInt(st.nextToken());
     m = Integer.parseInt(st.nextToken());
     init();
+    int[][] input = new int[m][2];
     for (int i = 0; i < m; i++) {
       st = new StringTokenizer(br.readLine());
       int from = Integer.parseInt(st.nextToken());
       int to = Integer.parseInt(st.nextToken());
-      boolean result = union(from, to);
-      if (!result && answer == 0) {
+      input[i] = new int[] { from, to };
+    }
+    for (int i = 0; i < m; i++) {
+      boolean result = union(input[i][0], input[i][1]);
+      if (!result) {
         answer = i + 1;
+        break;
       }
     }
+
     System.out.println(answer);
   }
 
