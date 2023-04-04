@@ -9,12 +9,13 @@ public class Solution {
         String s = "one4seveneight";
         System.out.println(solution(s));
     }
+
     public static int solution(String s) {
         StringBuilder sb = new StringBuilder();
-        String[] num = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-        while (s.length()>0) {
+        String[] num = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+        while (s.length() > 0) {
             boolean check = false;
-            for (int i=0; i<10; i++) {
+            for (int i = 0; i < 10; i++) {
                 if (s.startsWith(num[i])) {
                     sb.append(i);
                     s = s.substring(num[i].length());
@@ -22,7 +23,7 @@ public class Solution {
                     break;
                 }
             }
-            if (!check) {   // 숫자로 시작한다면
+            if (!check) { // 숫자로 시작한다면
                 sb.append(s.charAt(0));
                 s = s.substring(1);
             }
