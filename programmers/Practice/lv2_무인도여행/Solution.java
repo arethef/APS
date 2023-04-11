@@ -11,6 +11,7 @@ public class Solution {
     // 우하좌상
     static int[] dr = {0, 1, 0, -1};
     static int[] dc = {1, 0, -1, 0};
+
     static boolean[][] visited;
     static int N, M;
     public static ArrayList<Integer> solution(String[] maps) {
