@@ -1,4 +1,4 @@
-package Practice.lv2_무인도여행;
+package Practice.lv2.무인도여행;
 
 import java.util.*;
 
