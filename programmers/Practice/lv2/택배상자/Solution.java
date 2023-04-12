@@ -1,4 +1,4 @@
-package Practice.lv2_택배상자;
+package Practice.lv2.택배상자;
 
 import java.util.*;
 
