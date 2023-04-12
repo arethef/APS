@@ -1,4 +1,4 @@
-package Practice.lv1_추억점수;
+package Practice.lv1.추억점수;
 
 import java.util.*;
 
