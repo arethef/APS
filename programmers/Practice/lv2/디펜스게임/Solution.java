@@ -1,4 +1,4 @@
-package Practice.lv2_디펜스게임;
+package Practice.lv2.디펜스게임;
 
 import java.util.*;
 
