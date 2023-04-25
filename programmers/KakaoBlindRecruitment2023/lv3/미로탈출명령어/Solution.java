@@ -1,4 +1,4 @@
-package kakaoBlindRecruitment2023.MazeEscapeCommand;
+package KakaoBlindRecruitment2023.lv3.미로탈출명령어;
 
 import java.util.*;
 
