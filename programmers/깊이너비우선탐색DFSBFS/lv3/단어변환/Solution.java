@@ -1,4 +1,4 @@
-package lv3.깊이너비우선탐색DFSBFS.단어변환;
+package 깊이너비우선탐색DFSBFS.lv3.단어변환;
 
 import java.util.*;
 
