@@ -43,15 +43,15 @@ public class Solution {
             adjMatrix[f[1]-1][f[0]-1] = f[2];
         }
 
-        // A와 B가 갈라지는 지점: k
-        // 요금 = cost(s, k) + cost(k, a) + cost(k, b)
-        int[] costK = dijkstra(n, s-1);
+        // A와 B가 갈라지는 지점: K
+        // 요금 = cost(S, K) + cost(K, A) + cost(K, A)
+        int[] costS = dijkstra(n, s-1);
         int[] costA = dijkstra(n, a-1);
         int[] costB = dijkstra(n, b-1);
 
         int answer = Integer.MAX_VALUE;
         for (int i=0; i<n; i++) {
-            answer = Math.min(answer, costK[i]+costA[i]+costB[i]);
+            answer = Math.min(answer, costS[i]+costA[i]+costB[i]);
         }
         return answer;
     }
