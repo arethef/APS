@@ -1,4 +1,4 @@
-package Practice.lv0_옹알이_1_
+package Practice.lv0.옹알이1
 
 fun solution(babbling: Array<String>): Int {
     val regex = "aya|ye|woo|ma".toRegex()
