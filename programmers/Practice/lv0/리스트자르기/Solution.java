@@ -18,14 +18,31 @@ public class Solution {
         int b = slicer[1];
         int c = slicer[2];
         switch (n) {
-            case 1 -> answer = Arrays.copyOfRange(num_list, 0, b + 1);
-            case 2 -> answer = Arrays.copyOfRange(num_list, a, num_list.length);
-            case 3 -> answer = Arrays.copyOfRange(num_list, a, b + 1);
-            case 4 -> answer = IntStream.rangeClosed(a, b)
-                    .filter((i) -> (i - a) % c == 0)
-                    .map((i) -> num_list[i])
-                    .toArray();
+            case 1:
+                answer = Arrays.copyOfRange(num_list, 0, b+1);
+                break;
+            case 2:
+                answer = Arrays.copyOfRange(num_list, a, num_list.length);
+                break;
+            case 3:
+                answer = Arrays.copyOfRange(num_list, a, b+1);
+                break;
+            case 4:
+                answer = IntStream.rangeClosed(a, b)
+                        .filter((i) -> (i-a)%c==0)
+                        .map((i) -> num_list[i])
+                        .toArray();
+                break;
         }
+//        switch (n) {
+//            case 1 -> answer = Arrays.copyOfRange(num_list, 0, b + 1);
+//            case 2 -> answer = Arrays.copyOfRange(num_list, a, num_list.length);
+//            case 3 -> answer = Arrays.copyOfRange(num_list, a, b + 1);
+//            case 4 -> answer = IntStream.rangeClosed(a, b)
+//                    .filter((i) -> (i - a) % c == 0)
+//                    .map((i) -> num_list[i])
+//                    .toArray();
+//        }
         return answer;
     }
 }
