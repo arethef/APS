@@ -15,9 +15,6 @@ public class Solution {
     static int solution(int[][] routes) {
         int answer = 0;
         Arrays.sort(routes, (a, b) -> a[1]-b[1]);
-        for (int[] r : routes) {
-            System.out.println(Arrays.toString(r));
-        }
         int c = -30001;
         for (int[] r : routes) {
             if (r[0]<=c) {
