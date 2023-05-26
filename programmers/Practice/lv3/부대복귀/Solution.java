@@ -31,14 +31,14 @@ public class Solution {
         dist.put(destination, 0);
 
         Queue<Node> q = new LinkedList<>();
-        q.add(new Node(destination, 1));
+        q.add(new Node(destination, 0));
 
         while (!q.isEmpty()) {
             Node curr = q.poll();
             for (int i=0; i<adj.get(curr.no).size(); i++) {
                 int no = adj.get(curr.no).get(i);
                 if (!dist.containsKey(no)) {
-                    dist.put(no, curr.d);
+                    dist.put(no, curr.d+1);
                     q.add(new Node(no, curr.d+1));
                 }
             }
