@@ -22,9 +22,11 @@ public class Solution {
         for(int i = 0 ; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        for(int[] r : roads){
-            adj.get(r[0]).add(r[1]);
-            adj.get(r[1]).add(r[0]);
+        for(int[] road : roads){
+            int from = road[0];
+            int to = road[1];
+            adj.get(from).add(to);
+            adj.get(to).add(from);
         }
 
         HashMap<Integer, Integer> dist = new HashMap<>();
@@ -45,8 +47,8 @@ public class Solution {
         }
 
         List<Integer> answer = new ArrayList<>();
-        for (int s : sources) {
-            answer.add(dist.getOrDefault(s, -1));
+        for (int source : sources) {
+            answer.add(dist.getOrDefault(source, -1));
         }
         return answer.stream().mapToInt(Integer::intValue).toArray();
     }
