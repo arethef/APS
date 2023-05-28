@@ -1,8 +1,6 @@
 package 코딩기초트레이닝.lv0.주사위게임3;
 
 import java.util.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.*;
 
 public class Solution {
     public static void main(String[] args) {
